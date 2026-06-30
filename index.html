@@ -6,7 +6,6 @@
     <title>SPORTIF AI - إشارات متقدمة</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Changed font to Cairo for optimal Arabic display -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;800;900&family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
     
     <style>
@@ -223,13 +222,12 @@
 
     <div class="bg-gradient-to-r from-red-900/0 via-red-900/40 to-red-900/0 border-y border-red-500/20 text-center py-2 text-[10px] sm:text-xs font-black text-red-400 uppercase tracking-[0.2em] flex justify-center items-center gap-2 sm:gap-3 shadow-[0_0_20px_rgba(255,0,0,0.1)] relative z-10 backdrop-blur-sm">
         <i class="fa-solid fa-bolt animate-pulse"></i>
-        تبقى 4 مقاعد VIP только اليوم
+        تبقى 4 مقاعد VIP فقط اليوم
         <i class="fa-solid fa-bolt animate-pulse"></i>
     </div>
 
     <main id="app-container" class="flex-grow w-full max-w-6xl mx-auto p-4 sm:p-6 lg:p-8 relative z-10">
         
-        <!-- VIEW: HOME (Game Selection) -->
         <div id="view-home" class="w-full h-full pb-20 fade-in">
             <div class="text-center mb-8 sm:mb-12 mt-4 sm:mt-6 px-2">
                 <h1 class="text-3xl sm:text-4xl md:text-6xl font-black mb-3 sm:mb-4 bg-clip-text text-transparent bg-gradient-to-br from-white via-gray-200 to-gray-500 tracking-tight drop-shadow-lg">
@@ -240,12 +238,9 @@
                 </p>
             </div>
 
-            <!-- ГРИД ИГР -->
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-8" id="games-grid">
-                <!-- Заполняется через JS -->
-            </div>
+                </div>
 
-            <!-- ТАБЛИЦА СИГНАЛОВ -->
             <div class="mt-16 sm:mt-20 w-full max-w-4xl mx-auto">
                 <div class="flex items-center gap-3 mb-5 sm:mb-6 px-2">
                     <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
@@ -264,13 +259,11 @@
                             </tr>
                         </thead>
                         <tbody id="signals-table-body" class="divide-y divide-gray-800/30">
-                            <!-- Populated by JS -->
-                        </tbody>
+                            </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- FAQ SECTION -->
             <div class="mt-12 sm:mt-16 w-full max-w-4xl mx-auto mb-10">
                 <div class="flex items-center gap-3 mb-5 sm:mb-6 px-2">
                     <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
@@ -286,13 +279,12 @@
                             <i class="fa-solid fa-chevron-down text-gray-500 transition-transform duration-300 group-hover:text-cyan-400"></i>
                         </button>
                         <div class="faq-content bg-black/20">
-                            <p class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 text-[10px] sm:text-xs text-gray-400 leading-relaxed font-medium">معظم مستخدمي VIP يضاعفون إيداعاتهم في أول 3 إلى 4 إشارات. نوصي باللعب بحذر в البداية لتأمين أرباحك.</p>
+                            <p class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 text-[10px] sm:text-xs text-gray-400 leading-relaxed font-medium">معظم مستخدمي VIP يضاعفون إيداعاتهم в أول 3 إلى 4 إشارات. نوصي باللعب بحذر في البداية لتأمين أرباحك.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- TRUST BADGES -->
             <div class="flex flex-wrap justify-center gap-6 sm:gap-8 mt-16 sm:mt-20 opacity-50 text-[9px] sm:text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] pb-8">
                 <div class="flex items-center gap-2 drop-shadow-md"><i class="fa-solid fa-shield-halved text-green-500 text-sm sm:text-base"></i> درع ضد الحظر v3.1</div>
                 <div class="flex items-center gap-2 drop-shadow-md"><i class="fa-solid fa-lock text-cyan-500 text-sm sm:text-base"></i> مؤمن بـ 256-Bit SSL</div>
@@ -300,7 +292,6 @@
             </div>
         </div>
 
-        <!-- VIEW: PREDICTOR -->
         <div id="view-predictor" class="hidden w-full h-full flex flex-col items-center justify-center pt-8 pb-20 relative z-10">
             <button onclick="navigate('home')" class="absolute top-4 right-4 sm:top-8 sm:right-8 text-gray-400 hover:text-white transition-all flex items-center gap-2 glass-panel px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-sm sm:text-base font-semibold tracking-wide hover:border-gray-500 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
                 <i class="fa-solid fa-arrow-right"></i> عودة
@@ -318,7 +309,6 @@
                 </div>
             </div>
 
-            <!-- ТЕРМИНАЛ -->
             <div class="w-full max-w-md glass-panel rounded-2xl p-1 relative overflow-hidden mb-6 sm:mb-8 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-gray-700/50">
                 <div class="scanner-line hidden" id="scanner"></div>
                 
@@ -344,13 +334,11 @@
             </p>
         </div>
 
-        <!-- VIEW: ACTIVATION -->
         <div id="view-activation" class="hidden w-full min-h-[80vh] flex flex-col pt-4 pb-20 relative z-10">
             <button onclick="navigate('predictor')" class="absolute top-0 right-0 text-gray-400 hover:text-white transition-all flex items-center gap-2 glass-panel px-4 py-2 rounded-xl text-sm font-bold tracking-wide z-10">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
 
-            <!-- СЖАТЫЙ ВЕРХНИЙ БЛОК ДЛЯ МОБИЛОК -->
             <div class="text-center mb-5 sm:mb-10 mt-8 sm:mt-8 px-2">
                 <div class="inline-flex items-center justify-center w-12 h-12 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl bg-gradient-to-br from-yellow-500/20 to-orange-500/5 border border-yellow-500/30 text-yellow-400 mb-2 sm:mb-5 shadow-[0_0_30px_rgba(234,179,8,0.15)] relative overflow-hidden">
                     <div class="absolute inset-0 bg-white/5 -skew-x-12 -translate-x-full"></div>
@@ -367,10 +355,8 @@
                 </div>
             </div>
 
-            <!-- СЕТКА ТАРИФОВ -->
             <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-6 lg:gap-8 w-full max-w-4xl mx-auto px-2 sm:px-0">
                 
-                <!-- Option 1: Standard License with Wallet & QR (25 USDT) -->
                 <div class="glass-panel rounded-3xl p-6 sm:p-8 relative flex flex-col opacity-95 hover:opacity-100 transition-opacity duration-300 border-gray-700 mt-4 md:mt-0">
                     <div class="text-center border-b border-gray-800 pb-5 sm:pb-6 mb-5 sm:mb-6">
                         <h3 class="text-gray-400 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] mb-2">ترخيص قياسي</h3>
@@ -378,15 +364,13 @@
                         <div class="text-[10px] text-gray-500 mt-1" dir="ltr">(TRC-20)</div>
                     </div>
                     
-                    <!-- QR CODE (Embedded from IMG_9499.jpg) -->
                     <div class="flex flex-col items-center justify-center mb-5 bg-black/40 p-4 rounded-2xl border border-white/5 shadow-inner">
                         <div class="bg-white p-2 rounded-xl shadow-[0_0_20px_rgba(255,255,255,0.05)] border border-gray-800">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmQAAAJkAQMAAAD46g16AAAABlBMVEUAAAD///+l2Z/dAAAFZklEQVR4nO2dS3LjMAwFr8IbyMoNcoPctfAGvEit0pSpbI9HAtwHIsmZ7mIqi6wXgSBAIIn86g8A8I9Dby/g66N3gVfHu8Cr413g1fEu8Op4F3h1vAu8Ot4FXh3vAq+Od4FXx7vAq+Nd4NXxLvDqeBd4dbwLvDpeB3w/yX8bAn/PIn/n+LOfY+D/rX/eO67/7C/7Xb7vEa9n8fXRu8Cr413g1XndD7G83Xl8b+v6Wv6+IaybY6z7w/52fO0Xh/W1/D3LmsfXfnE2h3V96D1e98P6Pqw5vK7f94bX8/iT+wGvjnfXgG8YenMMeXf8OcvQGzZDH9b8pWvA94jXh95ewNfH78LQD+bX3Zg9t8ZOfvM/3w9eHw9889/t6fW5PdxrDo2v6Ysh8f3m0G6Omfzm8GbeffbT/S6wOnyvObwO/vH79pPeH0NfDHl9fN/vAq+O3wXwz/Gu+6HPf673fW7uAuuOf6yP3/w7P/p2bK8v7wLvD2P9w9BujpncHwZ6wz8eA14ffuivf78L7OYY+uY/7Bfeh773vBvWHPp23HkY9u16ZffDUDfH99vN7wa8b4bE9xt9WHeBIe/73LpZhjV9MTuH1/X7wzGv7wcOvf8d8Pp4wN8ffW69P6zph+7CmgVv/pM3+4fNMDv20PuDOfw2/K77YejTof+Wvxl6m76YyYfN9T8f2s0xe7Pv/88M/f4w1IdhfX8Y6g19WLPgzfU/N/v7u8C6fhcAP8frfeh7GPYLe7O/27dhfX9ofE3vD++Ovd7s96ffD7w6Xgf/HO+6H6af9D9uDnt982Fz/f/Z7Hf6099/P7Ab6OYY+mbofej7ZhjqvZ8O/fU/BfDu6O/vD+3m+H678b0/DLXgfejNf5hp2Fw/f99u9rt8P/D6eMDfH33ff9wOfXp/WHPooW/H99tN3w/9Yfc778P7OewX3u/W0P/bUPdDb9P6Zuh93RzaHz+3G7wPvTne98XwPvS9b8ee/z/zfvS5NfT+7WbvD2tdD/vNof+2wK/jAdf3O5O3m90f9o9b70Pv3fFms9+df9wMfXt9uxvWwW6gX3jfb8eeD9P6gfn1+93v9jLUpvXN/unY6/rQ981wN2Y+7P7Y6wPvXf/09YChfwLw/v4wzB/0uTX0zfH7ZpiWv5/Uv98FPjfDP/0uwNfH78LQD9MP3e1O9mFzvf83HzbXD2v6ZshzF/jcDL//vgnAn6O//wXAP/1uTH+3O8w0vNn/+X7wun7XD+v7oU/XgG/In7wZ/vxO9vXN8N7wZt/vD8N6eDNmPvRtzX7S+7tA/96A18fvAnh1vAu8Ol4H/Bzvuh/6Zuh7z627YfP79b/W7GeX9/vA+9D/GPr+W/6wGda6G/of3w++H/D/M+D18TvP6/ud+Ztsfof6p/vDmh99u7l/+vxXvxt2/S7fD7wPvDne99vxPh3vD7M5zDT8tvx3wbD7nefWzWbzO++Gf7xPh78Ofv8E+N4dY2NzvOnN/mffZPfNmN0v3I2ZNf02fI/D1+n6XWDp7wKvjncBvDpeHb9zO8eQf3o7ZveP2+u36V9D++O//PvdR/94E1h6wKujvwXg1fHqmN6G3t8FMD+vjvWv/N8F9C39bVp6wOunvwvgP8fQD4Gv0/UvCfyO7wf8Ocbv/C5gaOivO/6L2/A716f9f+p3gdUvAb8Bvzv67wLo5vA6XvcD8N8WvN8FXh2/+T8K4NXxeif6WwBeHdO/bgb+u4fA18n6vAtD3x/G73zfrg/vLv/0BfB1fP9/w6vjv/7f8fUAXh1/wT/9XcDvqS+AreOfBvAnr+/w9XgXeHW8C7w63gVeHe8Cr453gVfHu8Cr413g1fEu8Op4F3h1vAu8Ol4HXP8D3/4v87TqC5sAAAAASUVORK5CYII=" alt="USDT QR Code" class="w-28 h-28 sm:w-32 sm:h-32">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=TFYUdgz4EsrXGYoX3w4zyGJeeM7wesBNM4" alt="USDT QR Code" class="w-28 h-28 sm:w-32 sm:h-32">
                         </div>
                         <p class="text-[10px] text-gray-400 mt-2 font-medium"><i class="fa-solid fa-qrcode mr-1"></i> امسح رمز الاستجابة السريعة للدفع</p>
                     </div>
 
-                    <!-- WALLET ADDRESS WITH COPY BUTTON -->
                     <div class="w-full mb-6">
                         <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.1em] mb-1.5 text-right">عنوان المحفظة:</p>
                         <div class="flex items-center bg-[#050810] border border-gray-700 rounded-xl overflow-hidden w-full shadow-inner" dir="ltr">
@@ -407,7 +391,6 @@
                     </a>
                 </div>
 
-                <!-- Option 2: The Target (Free - Сверху на мобилках) -->
                 <div class="glass-panel border-green-500/40 rounded-3xl p-5 sm:p-8 relative shadow-[0_0_40px_rgba(0,255,136,0.1)] flex flex-col transform md:-translate-y-4 bg-gradient-to-b from-[rgba(0,255,136,0.05)] to-transparent">
                     <div class="absolute -top-3 sm:-top-4 right-1/2 transform translate-x-1/2 bg-green-500 text-black font-black text-[9px] sm:text-[10px] md:text-xs uppercase px-4 sm:px-5 py-1.5 rounded-full tracking-widest shadow-[0_0_20px_rgba(0,255,136,0.4)] w-max">
                         موصى به بشدة
@@ -441,17 +424,15 @@
                             </div>
                         </div>
 
-                        <!-- GAMIFIED STEP 3 -->
                         <div class="flex gap-3 sm:gap-4 items-start bg-black/40 p-4 sm:p-5 rounded-xl border border-white/5 flex-col w-full relative">
                             <div class="flex items-center gap-3 w-full mb-2 sm:mb-3">
                                 <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-green-500/20 text-green-400 flex items-center justify-center font-black text-xs sm:text-sm shrink-0 border border-green-500/30">3</div>
                                 <div class="text-[10px] sm:text-xs text-gray-300 font-black uppercase tracking-[0.1em]">حدد مستوى الإيداع:</div>
                             </div>
 
-                            <!-- IMPORTANT NOTE FOR USERS -->
                             <div class="bg-blue-500/10 border border-blue-500/30 p-3 rounded-xl mb-1 text-center w-full">
                                 <p class="text-blue-400 text-[10px] sm:text-xs font-bold leading-relaxed">
-                                    <i class="fa-solid fa-circle-exclamation ml-1"></i> هام: يجب إيداع هذا المبلغ في حسابك الشخصي на 1xBET، وستستخدمه للعب الخاص بك.
+                                    <i class="fa-solid fa-circle-exclamation ml-1"></i> هام: يجب إيداع هذا المبلغ في حسابك الشخصي على 1xBET، وستستخدمه للعب الخاص بك.
                                 </p>
                             </div>
                             
@@ -512,758 +493,6 @@
                 </div>
             </div>
 
-            <!-- CTA -->
-            <div class="mt-8 sm:mt-10 max-w-2xl mx-auto w-full text-center glass-panel p-5 sm:p-6 rounded-2xl border-blue-500/30 px-4 sm:px-0">
-                <p class="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4 font-bold tracking-wide">
-                    <i class="fa-solid fa-circle-info text-blue-400 ml-1 drop-shadow-md"></i> هل قمت بالإيداع؟ أرسل الإثبات للتفعيل.
-                </p>
-                <a href="https://t.me/MEHDIAPK_BOT" target="_blank" class="block w-full bg-gradient-to-r from-[#0088cc] to-[#00aaff] hover:scale-[1.02] text-white font-black text-sm sm:text-lg py-3.5 sm:py-4 px-4 rounded-xl transition-transform shadow-[0_10px_25px_rgba(0,136,204,0.4)] flex items-center justify-center gap-2 sm:gap-3 uppercase tracking-wide">
-                    <i class="fa-brands fa-telegram text-xl sm:text-2xl drop-shadow-md"></i> إرسال لقطة الشاشة للمسؤول
-                </a>
-            </div>
-        </div>
-    </main>
-
-    <div id="toast-container" class="fixed bottom-4 right-4 sm:right-auto sm:bottom-6 sm:left-6 z-50 flex flex-col gap-3 pointer-events-none sm:w-[350px]"></div>
-
-    <script>
-        const games = [
-            { id: 'aviator', name: 'Aviator', image: 'https://i.ibb.co.com/Q7hB33tv/aviator.jpg', accuracy: '98.4%' },
-            { id: 'mines', name: 'Mines', image: 'https://i.ibb.co.com/mrSMWpNz/images-2.jpg', accuracy: '97.1%' },
-            { id: 'penalty', name: 'PENALTY UNLIMITED', image: 'https://i.ibb.co.com/HT29wgN8/adfcb2f75c8a4f76ada397b21f5db09c.png', accuracy: '95.8%' },
-            { id: 'chicken', name: 'Chicken Road', image: 'https://i.ibb.co.com/MDT7TP3v/a78678b48f654984bf89d54d556ab3c2.png', accuracy: '96.2%' },
-            { id: 'tower', name: 'Tower Rush', image: 'https://i.ibb.co.com/jk1CHKTh/Square.webp', accuracy: '94.9%' },
-            { id: '1xlive', name: '1xLive', image: 'https://i.ibb.co.com/s9Pq4cHz/unnamed-1.png', accuracy: '99.1%' }
-        ];
-
-        let currentGame = null;
-        let isProcessing = false;
-        let timerInterval;
-
-        document.addEventListener('DOMContentLoaded', () => {
-            renderGames();
-            startFakeUserCounter();
-            startFakeToasts();
-            generateRecentSignals();
-            startDynamicSignals();
-        });
-
-        function toggleFaq(button) {
-            const content = button.nextElementSibling;
-            const icon = button.querySelector('i');
-            
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                icon.style.transform = 'rotate(0deg)';
-                button.classList.remove('text-white');
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                icon.style.transform = 'rotate(180deg)';
-                button.classList.add('text-white');
-            }
-        }
-
-        function selectTier(selectedId) {
-            const tiers = [1, 2, 3];
-            tiers.forEach(id => {
-                const card = document.getElementById(`tier-${id}`);
-                const radio = document.getElementById(`tier-${id}-radio`);
-                
-                if (id === selectedId) {
-                    card.className = "cursor-pointer border border-green-500/50 bg-green-500/10 rounded-xl p-3 sm:p-4 transition-all duration-300 transform scale-[1.02] shadow-[0_0_20px_rgba(0,255,136,0.15)] relative overflow-hidden";
-                    radio.className = "w-5 h-5 sm:w-6 sm:h-6 rounded-full border-[3px] sm:border-4 border-green-400 bg-[#050810] flex items-center justify-center shadow-[0_0_10px_rgba(0,255,136,0.5)]";
-                } else {
-                    card.className = "cursor-pointer border border-gray-700/50 bg-black/30 hover:bg-white/5 rounded-xl p-3 sm:p-4 transition-all duration-300 opacity-60 hover:opacity-100";
-                    radio.className = "w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-gray-600 bg-transparent flex items-center justify-center";
-                }
-            });
-        }
-
-        function renderGames() {
-            const grid = document.getElementById('games-grid');
-            if(!grid) return;
-            grid.innerHTML = games.map(game => {
-                return `
-                <div onclick="openGame('${game.id}')" class="cyber-card group h-[190px] sm:h-[240px] cursor-pointer flex flex-col items-center justify-center text-center p-3 sm:p-5 relative">
-                    <div class="relative z-10 flex flex-col items-center w-full h-full justify-start pt-2">
-                        <div class="w-14 h-14 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 overflow-hidden shadow-[0_0_15px_rgba(0,0,0,0.8)] border border-white/10 group-hover:border-cyan-500/50 group-hover:shadow-[0_0_25px_rgba(0,225,255,0.3)]">
-                            <img src="${game.image}" alt="${game.name}" class="w-full h-full object-cover">
-                        </div>
-                        <div class="mt-2 sm:mt-3">
-                            <h3 class="text-white font-black text-xs sm:text-base tracking-wide drop-shadow-md leading-tight" dir="ltr">${game.name}</h3>
-                            <p class="text-[10px] sm:text-xs text-cyan-400 mt-1 font-bold drop-shadow-[0_0_5px_rgba(0,225,255,0.5)]"><i class="fa-solid fa-bullseye"></i> الدقة: ${game.accuracy}</p>
-                        </div>
-                        
-                        <div class="w-full mt-auto pb-1">
-                            <button class="btn-game-pulse w-full py-1.5 sm:py-2 rounded-lg text-[10px] sm:text-xs font-black uppercase tracking-widest transition-transform duration-300 group-hover:scale-[1.05]">
-                                <i class="fa-solid fa-bolt ml-1"></i> توليد
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `}).join('');
-        }
-
-        function navigate(view) {
-            document.getElementById('view-home').classList.add('hidden');
-            document.getElementById('view-predictor').classList.add('hidden');
-            document.getElementById('view-activation').classList.add('hidden');
-            
-            if (view === 'home') document.getElementById('view-home').classList.remove('hidden');
-            else if (view === 'predictor') {
-                document.getElementById('view-predictor').classList.remove('hidden');
-                resetPredictorUI();
-            } else if (view === 'activation') {
-                document.getElementById('view-activation').classList.remove('hidden');
-                startTimer();
-            }
-            window.scrollTo(0,0);
-        }
-
-        function openGame(gameId) {
-            currentGame = games.find(g => g.id === gameId);
-            document.getElementById('pred-game-title').innerText = currentGame.name.toUpperCase();
-            
-            const iconEl = document.getElementById('pred-game-icon');
-            iconEl.innerHTML = `
-                <div class="absolute inset-0 bg-cyan-500/20 blur-2xl rounded-full scale-150"></div>
-                <img src="${currentGame.image}" alt="${currentGame.name}" class="w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-[2rem] shadow-[0_0_40px_rgba(0,225,255,0.3)] border-2 border-white/10 relative z-10">
-            `;
-            navigate('predictor');
-        }
-
-        function triggerSignal() {
-            if (isProcessing) return;
-            isProcessing = true;
-
-            const btn = document.querySelector('.btn-generate');
-            const status = document.getElementById('terminal-status');
-            const scanner = document.getElementById('scanner');
-            const radarArea = document.getElementById('radar-area');
-            
-            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> جاري الاعتراض...';
-            btn.style.opacity = '0.7';
-            scanner.classList.remove('hidden');
-            status.innerHTML = '<span class="text-yellow-400">جاري_فك_الهاش...</span>';
-            
-            radarArea.innerHTML = `<div class="font-mono text-[10px] sm:text-xs text-cyan-400 text-right w-full h-full overflow-hidden flex flex-col justify-end pb-2 opacity-80 drop-shadow-[0_0_5px_rgba(0,225,255,0.8)] font-bold" dir="ltr">
-                <div class="text-right">> بدء تشغيل WebSocket...</div>
-                <div class="text-right">> تخطي SSL...</div>
-                <div class="text-right">> حقن مستنشق الشبكة...</div>
-                <div class="text-white text-right">> جلب البذرة #84920...</div>
-            </div>`;
-
-            setTimeout(() => { navigate('activation'); }, 2500);
-        }
-
-        function startTimer() {
-            if (timerInterval) clearInterval(timerInterval);
-            let time = 15 * 60;
-            const timerEl = document.getElementById('slot-timer');
-            
-            timerInterval = setInterval(() => {
-                time--;
-                if (time < 0) {
-                    clearInterval(timerInterval);
-                    timerEl.innerText = "00:00";
-                    timerEl.classList.add('text-red-500');
-                    return;
-                }
-                const m = Math.floor(time / 60).toString().padStart(2, '0');
-                const s = (time % 60).toString().padStart(2, '0');
-                timerEl.innerText = `${m}:${s}`;
-                
-                if (time < 300) {
-                    timerEl.classList.remove('text-white');
-                    timerEl.classList.add('text-red-500');
-                }
-            }, 1000);
-        }
-
-        function resetPredictorUI() {
-            isProcessing = false;
-            const btn = document.querySelector('.btn-generate');
-            const status = document.getElementById('terminal-status');
-            const scanner = document.getElementById('scanner');
-            const radarArea = document.getElementById('radar-area');
-
-            if(btn) {
-                btn.innerHTML = '<i class="fa-solid fa-bolt text-yellow-300"></i> توليد إشارة';
-                btn.style.opacity = '1';
-            }
-            if(scanner) scanner.classList.add('hidden');
-            if(status) status.innerHTML = 'في_انتظار_الامر';
-            if(radarArea) {
-                radarArea.innerHTML = `
-                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,225,255,0.05)_0%,transparent_70%)]"></div>
-                    <i class="fa-solid fa-crosshairs text-4xl sm:text-5xl text-gray-700 mb-4 sm:mb-5 animate-spin-slow" style="animation-duration: 10s;"></i>
-                    <p class="text-gray-500 text-xs sm:text-sm max-w-[250px] font-medium leading-relaxed px-2">تم بدء الخوارزمية. اضغط على توليد لاعتراض البذرة التالية.</p>
-                `;
-            }
-        }
-
-        function copyText(elementId) {
-            const el = document.getElementById(elementId);
-            el.select();
-            el.setSelectionRange(0, 99999);
-            document.execCommand("copy");
-            showToast('تم النسخ إلى الحافظة!', 'success');
-        }
-
-        function startFakeUserCounter() {
-            const el = document.getElementById('user-count');
-            let count = 1482;
-            setInterval(() => {
-                count += Math.floor(Math.random() * 14) - 5;
-                if(count < 1200) count = 1200;
-                el.innerText = count.toLocaleString('en-US');
-            }, 3500);
-        }
-
-        function getStatusHtml(isMiss) {
-            return isMiss 
-                ? '<div class="inline-block bg-red-500/10 text-red-500 px-2 sm:px-3 py-1 rounded border border-red-500/30 text-[9px] sm:text-[10px] font-black tracking-widest uppercase shadow-[0_0_10px_rgba(239,68,68,0.2)]">فشل</div>' 
-                : '<div class="inline-block bg-green-500/10 text-green-400 px-2 sm:px-3 py-1 rounded border border-green-500/30 text-[9px] sm:text-[10px] font-black tracking-widest uppercase shadow-[0_0_10px_rgba(0,255,136,0.2)]">نجاح</div>';
-        }
-
-        function generateRecentSignals() {
-            const tbody = document.getElementById('signals-table-body');
-            if(!tbody) return;
-            const results = [];
-            for(let i=0; i<6; i++) {
-                const isMiss = Math.random() > 0.80;
-                const game = games[Math.floor(Math.random() * games.length)];
-                let hashText = game.id === 'aviator' ? `Crash @ ${(Math.random() * 5 + 1.2).toFixed(2)}x` : 
-                               game.id === 'mines' ? `Safe: R${Math.floor(Math.random()*5+1)} C${Math.floor(Math.random()*5+1)}` : 
-                               `0x${Math.random().toString(16).substring(2, 10)}...`;
-
-                results.push(`
-                    <tr class="hover:bg-white/5 transition-colors">
-                        <td class="px-4 sm:px-5 py-3 sm:py-3.5 flex items-center gap-2 sm:gap-3">
-                            <img src="${game.image}" class="w-6 h-6 sm:w-7 sm:h-7 rounded-md object-cover shadow-sm border border-white/5"> 
-                            <span class="text-gray-300 font-bold tracking-wide" dir="ltr">${game.name}</span>
-                        </td>
-                        <td class="px-4 sm:px-5 py-3 sm:py-3.5 mono-font text-[10px] sm:text-xs text-cyan-500/80 font-bold text-left" dir="ltr">${hashText}</td>
-                        <td class="px-4 sm:px-5 py-3 sm:py-3.5 text-left">${getStatusHtml(isMiss)}</td>
-                    </tr>
-                `);
-            }
-            tbody.innerHTML = results.join('');
-        }
-
-        function startDynamicSignals() {
-            setInterval(() => {
-                const tbody = document.getElementById('signals-table-body');
-                if(!tbody) return;
-
-                const isMiss = Math.random() > 0.80;
-                const game = games[Math.floor(Math.random() * games.length)];
-                let hashText = game.id === 'aviator' ? `Crash @ ${(Math.random() * 5 + 1.2).toFixed(2)}x` : 
-                               game.id === 'mines' ? `Safe: R${Math.floor(Math.random()*5+1)} C${Math.floor(Math.random()*5+1)}` : 
-                               `0x${Math.random().toString(16).substring(2, 10)}...`;
-
-                const tr = document.createElement('tr');
-                tr.className = "hover:bg-white/5 transition-colors new-row";
-                tr.innerHTML = `
-                    <td class="px-4 sm:px-5 py-3 sm:py-3.5 flex items-center gap-2 sm:gap-3">
-                        <img src="${game.image}" class="w-6 h-6 sm:w-7 sm:h-7 rounded-md object-cover shadow-sm border border-white/5"> 
-                        <span class="text-gray-300 font-bold tracking-wide" dir="ltr">${game.name}</span>
-                    </td>
-                    <td class="px-4 sm:px-5 py-3 sm:py-3.5 mono-font text-[10px] sm:text-xs text-cyan-500/80 font-bold text-left" dir="ltr">${hashText}</td>
-                    <td class="px-4 sm:px-5 py-3 sm:py-3.5 text-left">${getStatusHtml(isMiss)}</td>
-                `;
-
-                tbody.insertBefore(tr, tbody.firstChild);
-                if (tbody.children.length > 6) tbody.removeChild(tbody.lastChild);
-            }, 3000);
-        }
-
-        const names = ['Ali_99', 'CryptoKing', 'User4821', 'Moha_Iq', 'Kazim88', 'Sarah_X', 'Winner001', 'GhostFace'];
-        const amounts = [170, 450, 900, 320, 1200, 600, 2500];
-        const fakeGames = ['Aviator', 'Mines', '1xLive'];
-
-        function startFakeToasts() {
-            setInterval(() => {
-                if(Math.random() > 0.3) {
-                    const name = names[Math.floor(Math.random() * names.length)];
-                    const amount = amounts[Math.floor(Math.random() * amounts.length)];
-                    const game = fakeGames[Math.floor(Math.random() * fakeGames.length)];
-                    showToast(`<b class="text-white">${name}</b> اعترض للتو ${amount.toLocaleString('en-US')} EGP في ${game}!`, 'win');
-                }
-            }, Math.floor(Math.random() * 7000) + 8000);
-        }
-
-        function showToast(message, type = 'default') {
-            const container = document.getElementById('toast-container');
-            if(!container) return;
-            const toast = document.createElement('div');
-            
-            let bgClass = 'bg-[#050810]/90 border-gray-700/50';
-            let icon = '<i class="fa-solid fa-info-circle text-cyan-400"></i>';
-            
-            if (type === 'success') {
-                bgClass = 'bg-green-900/80 border-green-500/50 shadow-[0_0_20px_rgba(0,255,136,0.2)]';
-                icon = '<i class="fa-solid fa-check-circle text-green-400"></i>';
-            } else if (type === 'win') {
-                bgClass = 'bg-[#050810]/90 border-yellow-500/30 shadow-[0_0_20px_rgba(234,179,8,0.15)]';
-                icon = '<i class="fa-solid fa-bolt text-yellow-400"></i>';
-            }
-
-            toast.className = `glass-panel ${bgClass} rounded-xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-300 toast-enter backdrop-blur-xl shadow-2xl w-full`;
-            toast.innerHTML = `${icon} <span class="font-medium tracking-wide">${message}</span>`;
-            
-            container.appendChild(toast);
-            
-            requestAnimationFrame(() => {
-                toast.classList.remove('toast-enter');
-                toast.classList.add('toast-enter-active');
-            });
-
-            setTimeout(() => {
-                toast.classList.remove('toast-enter-active');
-                toast.classList.add('toast-leave');
-                setTimeout(() => toast.remove(), 500);
-            }, 4000);
-        }
-    </script>
-</body>
-</html>            content: '';
-            position: absolute;
-            top: -50%; left: -50%; width: 200%; height: 200%;
-            background: conic-gradient(transparent, transparent 70%, rgba(0, 255, 136, 0.4), var(--neon-cyan));
-            animation: spin 4s linear infinite;
-            z-index: -2;
-            opacity: 0.5;
-            transition: opacity 0.3s, animation-duration 0.3s;
-        }
-
-        .cyber-card::after {
-            content: '';
-            position: absolute;
-            inset: 1px;
-            background: rgba(13, 17, 26, 0.85);
-            backdrop-filter: blur(12px);
-            border-radius: inherit;
-            z-index: -1;
-        }
-
-        .cyber-card:hover {
-            transform: translateY(-6px) scale(1.02);
-            box-shadow: 0 15px 35px -10px rgba(0, 255, 136, 0.25);
-        }
-        
-        .cyber-card:hover::before {
-            opacity: 1;
-            animation-duration: 1.5s;
-            background: conic-gradient(transparent, transparent 60%, var(--neon-green), var(--neon-cyan));
-        }
-
-        @keyframes spin {
-            100% { transform: rotate(360deg); }
-        }
-
-        .btn-generate {
-            position: relative;
-            background: linear-gradient(135deg, rgba(0,255,136,0.2), rgba(0,225,255,0.2));
-            border: 1px solid var(--neon-green);
-            box-shadow: 0 0 15px rgba(0, 255, 136, 0.2), inset 0 0 20px rgba(0, 255, 136, 0.1);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .btn-generate::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%; width: 50%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transform: skewX(-20deg);
-            animation: shine 3s infinite;
-        }
-        .btn-generate:hover {
-            box-shadow: 0 0 25px rgba(0, 255, 136, 0.4), inset 0 0 30px rgba(0, 255, 136, 0.2);
-            text-shadow: 0 0 8px rgba(255,255,255,0.8);
-        }
-
-        @keyframes shine { 100% { left: 200%; } }
-
-        @keyframes neon-pulse-green {
-            0% { 
-                box-shadow: 0 0 5px rgba(0, 255, 136, 0.2), inset 0 0 5px rgba(0, 255, 136, 0.1); 
-                border-color: rgba(0, 255, 136, 0.3); 
-                background: rgba(0, 255, 136, 0.05);
-            }
-            100% { 
-                box-shadow: 0 0 20px rgba(0, 255, 136, 0.6), inset 0 0 10px rgba(0, 255, 136, 0.3); 
-                border-color: rgba(0, 255, 136, 1); 
-                background: rgba(0, 255, 136, 0.15);
-            }
-        }
-        .btn-game-pulse {
-            animation: neon-pulse-green 1s infinite alternate ease-in-out;
-            color: var(--neon-green);
-            text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
-            border: 1px solid var(--neon-green);
-        }
-
-        @keyframes neon-pulse-blue {
-            0% { 
-                box-shadow: 0 0 10px rgba(37, 99, 235, 0.4); 
-                filter: brightness(1);
-            }
-            100% { 
-                box-shadow: 0 0 35px rgba(59, 130, 246, 0.9), 0 0 15px rgba(96, 165, 250, 0.6); 
-                filter: brightness(1.25);
-            }
-        }
-        .btn-deposit-pulse {
-            animation: neon-pulse-blue 1.2s infinite alternate ease-in-out;
-        }
-
-        @keyframes scan {
-            0% { top: -10%; opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { top: 110%; opacity: 0; }
-        }
-        .scanner-line {
-            position: absolute; width: 100%; height: 2px;
-            background: var(--neon-cyan); box-shadow: 0 0 15px 3px var(--neon-cyan);
-            animation: scan 2.5s linear infinite; z-index: 10;
-        }
-
-        @keyframes slideInDown {
-            from { opacity: 0; transform: translateY(-10px); background: rgba(0,255,136,0.1); }
-            to { opacity: 1; transform: translateY(0); background: transparent; }
-        }
-        .new-row { animation: slideInDown 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
-
-        .faq-content {
-            max-height: 0; overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.3); }
-        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--neon-cyan); box-shadow: 0 0 10px var(--neon-cyan); }
-    </style>
-</head>
-<body class="antialiased flex flex-col relative">
-
-    <div class="ambient-blob blob-1"></div>
-    <div class="ambient-blob blob-2"></div>
-    <div class="ambient-blob blob-3"></div>
-
-    <nav class="glass-panel sticky top-0 z-40 w-full px-3 sm:px-4 py-3 sm:py-4 flex justify-between items-center border-b border-gray-800/60 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
-        <div class="flex items-center gap-2 sm:gap-3 cursor-pointer group" onclick="navigate('home')">
-            <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 flex items-center justify-center shadow-[0_0_15px_rgba(0,225,255,0.15)] group-hover:border-cyan-500/50 transition-colors">
-                <i class="fa-solid fa-microchip text-lg sm:text-xl neon-text-cyan"></i>
-            </div>
-            <span class="font-black text-lg sm:text-xl tracking-widest text-white font-mono" dir="ltr">SPORTIF <span class="neon-text-green font-bold">AI</span></span>
-        </div>
-        <div class="flex items-center gap-3 sm:gap-4 text-[10px] sm:text-xs font-bold tracking-wide">
-            <div class="flex items-center gap-1.5 sm:gap-2 bg-black/40 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg border border-white/5 shadow-inner">
-                <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_#00ff88]"></div>
-                <span class="text-gray-400 uppercase">الخادم: <span class="neon-text-green">متصل</span></span>
-            </div>
-            <div class="hidden sm:flex items-center gap-2 bg-black/40 px-4 py-2 rounded-lg border border-white/5 shadow-inner">
-                <i class="fa-solid fa-users text-cyan-500/70"></i>
-                <span class="text-gray-400"><span id="user-count" class="text-white font-black">1,482</span> مستخدم</span>
-            </div>
-        </div>
-    </nav>
-
-    <div class="bg-gradient-to-r from-red-900/0 via-red-900/40 to-red-900/0 border-y border-red-500/20 text-center py-2 text-[10px] sm:text-xs font-black text-red-400 uppercase tracking-[0.2em] flex justify-center items-center gap-2 sm:gap-3 shadow-[0_0_20px_rgba(255,0,0,0.1)] relative z-10 backdrop-blur-sm">
-        <i class="fa-solid fa-bolt animate-pulse"></i>
-        تبقى 4 مقاعد VIP только اليوم
-        <i class="fa-solid fa-bolt animate-pulse"></i>
-    </div>
-
-    <main id="app-container" class="flex-grow w-full max-w-6xl mx-auto p-4 sm:p-6 lg:p-8 relative z-10">
-        
-        <!-- VIEW: HOME (Game Selection) -->
-        <div id="view-home" class="w-full h-full pb-20 fade-in">
-            <div class="text-center mb-8 sm:mb-12 mt-4 sm:mt-6 px-2">
-                <h1 class="text-3xl sm:text-4xl md:text-6xl font-black mb-3 sm:mb-4 bg-clip-text text-transparent bg-gradient-to-br from-white via-gray-200 to-gray-500 tracking-tight drop-shadow-lg">
-                    اختر الخوارزمية
-                </h1>
-                <p class="text-gray-400 max-w-2xl mx-auto font-medium tracking-wide text-xs sm:text-sm md:text-base leading-relaxed">
-                    الشبكة العصبية الخاصة بنا <span class="text-cyan-400 font-bold">تتخطى نظام Provably Fair v4.2</span>. ابدأ الاتصال بخادم اللعبة المخصص أدناه.
-                </p>
-            </div>
-
-            <!-- ГРИД ИГР -->
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-8" id="games-grid">
-                <!-- Заполняется через JS -->
-            </div>
-
-            <!-- ТАБЛИЦА СИГНАЛОВ -->
-            <div class="mt-16 sm:mt-20 w-full max-w-4xl mx-auto">
-                <div class="flex items-center gap-3 mb-5 sm:mb-6 px-2">
-                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
-                        <i class="fa-solid fa-radar text-cyan-400 animate-spin-slow text-sm sm:text-base"></i>
-                    </div>
-                    <h3 class="text-white font-bold text-lg sm:text-xl tracking-wide">الاعتراضات المباشرة</h3>
-                </div>
-                
-                <div class="glass-panel rounded-2xl overflow-hidden overflow-x-auto">
-                    <table class="w-full text-right text-xs sm:text-sm min-w-[450px]">
-                        <thead class="bg-black/40 text-[10px] sm:text-xs uppercase text-gray-500 tracking-wider font-bold border-b border-gray-800">
-                            <tr>
-                                <th class="px-4 sm:px-5 py-3 sm:py-4">العقدة المستهدفة</th>
-                                <th class="px-4 sm:px-5 py-3 sm:py-4 text-left" dir="ltr">الهاش مفكوك الشفرة</th>
-                                <th class="px-4 sm:px-5 py-3 sm:py-4 text-left">الحالة</th>
-                            </tr>
-                        </thead>
-                        <tbody id="signals-table-body" class="divide-y divide-gray-800/30">
-                            <!-- Populated by JS -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- FAQ SECTION -->
-            <div class="mt-12 sm:mt-16 w-full max-w-4xl mx-auto mb-10">
-                <div class="flex items-center gap-3 mb-5 sm:mb-6 px-2">
-                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
-                        <i class="fa-solid fa-database text-purple-400 text-sm sm:text-base"></i>
-                    </div>
-                    <h3 class="text-white font-bold text-lg sm:text-xl tracking-wide">قاعدة المعرفة</h3>
-                </div>
-                
-                <div class="space-y-3">
-                    <div class="glass-panel rounded-xl overflow-hidden group">
-                        <button onclick="toggleFaq(this)" class="w-full text-right px-4 sm:px-5 py-3 sm:py-4 text-gray-200 font-bold tracking-wide flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors text-xs sm:text-sm">
-                            <span>ما مدى سرعة استرداد وديعتي؟</span>
-                            <i class="fa-solid fa-chevron-down text-gray-500 transition-transform duration-300 group-hover:text-cyan-400"></i>
-                        </button>
-                        <div class="faq-content bg-black/20">
-                            <p class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 text-[10px] sm:text-xs text-gray-400 leading-relaxed font-medium">معظم مستخدمي VIP يضاعفون إيداعاتهم في أول 3 إلى 4 إشارات. نوصي باللعب بحذر в البداية لتأمين أرباحك.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TRUST BADGES -->
-            <div class="flex flex-wrap justify-center gap-6 sm:gap-8 mt-16 sm:mt-20 opacity-50 text-[9px] sm:text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] pb-8">
-                <div class="flex items-center gap-2 drop-shadow-md"><i class="fa-solid fa-shield-halved text-green-500 text-sm sm:text-base"></i> درع ضد الحظر v3.1</div>
-                <div class="flex items-center gap-2 drop-shadow-md"><i class="fa-solid fa-lock text-cyan-500 text-sm sm:text-base"></i> مؤمن بـ 256-Bit SSL</div>
-                <div class="flex items-center gap-2 drop-shadow-md"><i class="fa-solid fa-ghost text-purple-500 text-sm sm:text-base"></i> API غير قابل للكشف</div>
-            </div>
-        </div>
-
-        <!-- VIEW: PREDICTOR -->
-        <div id="view-predictor" class="hidden w-full h-full flex flex-col items-center justify-center pt-8 pb-20 relative z-10">
-            <button onclick="navigate('home')" class="absolute top-4 right-4 sm:top-8 sm:right-8 text-gray-400 hover:text-white transition-all flex items-center gap-2 glass-panel px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-sm sm:text-base font-semibold tracking-wide hover:border-gray-500 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
-                <i class="fa-solid fa-arrow-right"></i> عودة
-            </button>
-
-            <div class="text-center mb-8 sm:mb-10 mt-16 sm:mt-0 px-2">
-                <div id="pred-game-icon" class="mb-5 sm:mb-6 flex justify-center relative">
-                    <div class="absolute inset-0 bg-cyan-500/20 blur-2xl rounded-full scale-150"></div>
-                </div>
-                
-                <h2 id="pred-game-title" class="text-3xl sm:text-4xl font-black tracking-tight text-white drop-shadow-lg font-mono">GAME NAME</h2>
-                <div class="inline-flex items-center gap-2 mt-3 bg-green-500/10 border border-green-500/20 px-3 sm:px-4 py-1.5 rounded-full backdrop-blur-md">
-                    <i class="fa-solid fa-link text-green-400 text-[10px] sm:text-xs"></i>
-                    <p class="neon-text-green mono-font text-[10px] sm:text-xs uppercase tracking-wider font-bold">مقبس آمن متصل</p>
-                </div>
-            </div>
-
-            <!-- ТЕРМИНАЛ -->
-            <div class="w-full max-w-md glass-panel rounded-2xl p-1 relative overflow-hidden mb-6 sm:mb-8 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-gray-700/50">
-                <div class="scanner-line hidden" id="scanner"></div>
-                
-                <div class="bg-[#050810] rounded-xl p-4 sm:p-5 h-full relative z-10">
-                    <div class="flex justify-between items-center border-b border-gray-800/80 pb-3 sm:pb-4 mb-3 sm:mb-4">
-                        <span class="text-gray-500 text-[10px] sm:text-xs font-black uppercase tracking-widest">مخرجات النظام</span>
-                        <span class="neon-text-cyan mono-font text-[10px] sm:text-xs" id="terminal-status">في_انتظار_الامر</span>
-                    </div>
-                    
-                    <div class="h-40 sm:h-44 flex items-center justify-center flex-col text-center relative" id="radar-area">
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,225,255,0.05)_0%,transparent_70%)]"></div>
-                        <i class="fa-solid fa-crosshairs text-4xl sm:text-5xl text-gray-700 mb-4 sm:mb-5 animate-spin-slow" style="animation-duration: 10s;"></i>
-                        <p class="text-gray-500 text-xs sm:text-sm max-w-[250px] font-medium leading-relaxed px-2">تم بدء الخوارزمية. اضغط على توليد لاعتراض البذرة التالية.</p>
-                    </div>
-                </div>
-            </div>
-
-            <button onclick="triggerSignal()" class="btn-generate w-full max-w-md py-3.5 sm:py-4 rounded-xl text-white font-black text-lg sm:text-xl uppercase tracking-widest shadow-2xl transform transition active:scale-95 flex items-center justify-center gap-3">
-                <i class="fa-solid fa-bolt text-yellow-300"></i> توليد إشارة
-            </button>
-            <p class="text-gray-500 text-[9px] sm:text-[10px] mt-4 sm:mt-5 uppercase tracking-widest font-bold flex items-center gap-2">
-                <i class="fa-solid fa-shield-halved text-green-500"></i> غير قابل للكشف 100% من جانب العميل
-            </p>
-        </div>
-
-        <!-- VIEW: ACTIVATION -->
-        <div id="view-activation" class="hidden w-full min-h-[80vh] flex flex-col pt-4 pb-20 relative z-10">
-            <button onclick="navigate('predictor')" class="absolute top-0 right-0 text-gray-400 hover:text-white transition-all flex items-center gap-2 glass-panel px-4 py-2 rounded-xl text-sm font-bold tracking-wide z-10">
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-
-            <!-- СЖАТЫЙ ВЕРХНИЙ БЛОК ДЛЯ МОБИЛОК -->
-            <div class="text-center mb-5 sm:mb-10 mt-8 sm:mt-8 px-2">
-                <div class="inline-flex items-center justify-center w-12 h-12 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl bg-gradient-to-br from-yellow-500/20 to-orange-500/5 border border-yellow-500/30 text-yellow-400 mb-2 sm:mb-5 shadow-[0_0_30px_rgba(234,179,8,0.15)] relative overflow-hidden">
-                    <div class="absolute inset-0 bg-white/5 -skew-x-12 -translate-x-full"></div>
-                    <i class="fa-solid fa-lock text-xl sm:text-4xl drop-shadow-md"></i>
-                </div>
-                <h2 class="text-xl sm:text-3xl md:text-4xl font-black mb-1 sm:mb-3 text-white tracking-tight drop-shadow-lg">مطلوب وصول VIP</h2>
-                <p class="text-gray-400 max-w-xl mx-auto font-medium text-[10px] sm:text-sm md:text-base leading-snug sm:leading-relaxed">
-                    لاعتراض الهاش مباشرة، تحتاج إلى ترخيص نشط. اختر دفع الرسوم القياسية أو احصل عليه <span class="neon-text-green font-black uppercase">مجاناً 100%</span> عبر راعينا.
-                </p>
-                
-                <div class="mt-3 sm:mt-6 inline-flex items-center gap-1.5 sm:gap-3 bg-red-900/20 border border-red-500/40 px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full backdrop-blur-md shadow-[0_0_15px_rgba(255,0,0,0.1)]">
-                    <i class="fa-solid fa-hourglass-half text-red-400 animate-pulse text-[10px] sm:text-base"></i>
-                    <span class="text-red-300 text-[9px] sm:text-xs font-bold uppercase tracking-wide">تم حجز المكان لمدة: <span id="slot-timer" class="text-white mono-font text-xs sm:text-base mr-1 font-black shadow-black drop-shadow-md" dir="ltr">15:00</span></span>
-                </div>
-            </div>
-
-            <!-- СЕТКА ТАРИФОВ -->
-            <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-6 lg:gap-8 w-full max-w-4xl mx-auto px-2 sm:px-0">
-                
-                <!-- Option 1: Standard License with Wallet & QR (25 USDT) -->
-                <div class="glass-panel rounded-3xl p-6 sm:p-8 relative flex flex-col opacity-95 hover:opacity-100 transition-opacity duration-300 border-gray-700 mt-4 md:mt-0">
-                    <div class="text-center border-b border-gray-800 pb-5 sm:pb-6 mb-5 sm:mb-6">
-                        <h3 class="text-gray-400 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] mb-2">ترخيص قياسي</h3>
-                        <div class="text-3xl sm:text-4xl font-black text-white tracking-tight" dir="ltr">25.00 <span class="text-base sm:text-lg text-gray-500">USDT</span></div>
-                        <div class="text-[10px] text-gray-500 mt-1" dir="ltr">(TRC-20)</div>
-                    </div>
-                    
-                    <!-- QR CODE (Embedded from IMG_9499.jpg) -->
-                    <div class="flex flex-col items-center justify-center mb-5 bg-black/40 p-4 rounded-2xl border border-white/5 shadow-inner">
-                        <div class="bg-white p-2 rounded-xl shadow-[0_0_20px_rgba(255,255,255,0.05)] border border-gray-800">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmQAAAJkAQMAAAD46g16AAAABlBMVEUAAAD///+l2Z/dAAAFZklEQVR4nO2dS3LjMAwFr8IbyMoNcoPctfAGvEit0pSpbI9HAtwHIsmZ7mIqi6wXgSBAIIn86g8A8I9Dby/g66N3gVfHu8Cr413g1fEu8Op4F3h1vAu8Ot4FXh3vAq+Od4FXx7vAq+Nd4NXxLvDqeBd4dbwLvDpeB3w/yX8bAn/PIn/n+LOfY+D/rX/eO67/7C/7Xb7vEa9n8fXRu8Cr413g1XndD7G83Xl8b+v6Wv6+IaybY6z7w/52fO0Xh/W1/D3LmsfXfnE2h3V96D1e98P6Pqw5vK7f94bX8/iT+wGvjnfXgG8YenMMeXf8OcvQGzZDH9b8pWvA94jXh95ewNfH78LQD+bX3Zg9t8ZOfvM/3w9eHw9889/t6fW5PdxrDo2v6Ysh8f3m0G6Omfzm8GbeffbT/S6wOnyvObwO/vH79pPeH0NfDHl9fN/vAq+O3wXwz/Gu+6HPf673fW7uAuuOf6yP3/w7P/p2bK8v7wLvD2P9w9BujpncHwZ6wz8eA14ffuivf78L7OYY+uY/7Bfeh773vBvWHPp23HkY9u16ZffDUDfH99vN7wa8b4bE9xt9WHeBIe/73LpZhjV9MTuH1/X7wzGv7wcOvf8d8Pp4wN8ffW69P6zph+7CmgVv/pM3+4fNMDv20PuDOfw2/K77YejTof+Wvxl6m76YyYfN9T8f2s0xe7Pv/88M/f4w1IdhfX8Y6g19WLPgzfU/N/v7u8C6fhcAP8frfeh7GPYLe7O/27dhfX9ofE3vD++Ovd7s96ffD7w6Xgf/HO+6H6af9D9uDnt982Fz/f/Z7Hf6099/P7Ab6OYY+mbofej7ZhjqvZ8O/fU/BfDu6O/vD+3m+H678b0/DLXgfejNf5hp2Fw/f99u9rt8P/D6eMDfH33ff9wOfXp/WHPooW/H99tN3w/9Yfc778P7OewX3u/W0P/bUPdDb9P6Zuh93RzaHz+3G7wPvTne98XwPvS9b8ee/z/zfvS5NfT+7WbvD2tdD/vNof+2wK/jAdf3O5O3m90f9o9b70Pv3fFms9+df9wMfXt9uxvWwW6gX3jfb8eeD9P6gfn1+93v9jLUpvXN/unY6/rQ981wN2Y+7P7Y6wPvXf/09YChfwLw/v4wzB/0uTX0zfH7ZpiWv5/Uv98FPjfDP/0uwNfH78LQD9MP3e1O9mFzvf83HzbXD2v6ZshzF/jcDL//vgnAn6O//wXAP/1uTH+3O8w0vNn/+X7wun7XD+v7oU/XgG/In7wZ/vxO9vXN8N7wZt/vD8N6eDNmPvRtzX7S+7tA/96A18fvAnh1vAu8Ol4H/Bzvuh/6Zuh7z627YfP79b/W7GeX9/vA+9D/GPr+W/6wGda6G/of3w++H/D/M+D18TvP6/ud+Ztsfof6p/vDmh99u7l/+vxXvxt2/S7fD7wPvDne99vxPh3vD7M5zDT8tvx3wbD7nefWzWbzO++Gf7xPh78Ofv8E+N4dY2NzvOnN/mffZPfNmN0v3I2ZNf02fI/D1+n6XWDp7wKvjncBvDpeHb9zO8eQf3o7ZveP2+u36V9D++O//PvdR/94E1h6wKujvwXg1fHqmN6G3t8FMD+vjvWv/N8F9C39bVp6wOunvwvgP8fQD4Gv0/UvCfyO7wf8Ocbv/C5gaOivO/6L2/A716f9f+p3gdUvAb8Bvzv67wLo5vA6XvcD8N8WvN8FXh2/+T8K4NXxeif6WwBeHdO/bgb+u4fA18n6vAtD3x/G73zfrg/vLv/0BfB1fP9/w6vjv/7f8fUAXh1/wT/9XcDvqS+AreOfBvAnr+/w9XgXeHW8C7w63gVeHe8Cr453gVfHu8Cr413g1fEu8Op4F3h1vAu8Ol4HXP8D3/4v87TqC5sAAAAASUVORK5CYII=" alt="USDT QR Code" class="w-28 h-28 sm:w-32 sm:h-32">
-                        </div>
-                        <p class="text-[10px] text-gray-400 mt-2 font-medium"><i class="fa-solid fa-qrcode mr-1"></i> امسح رمز الاستجابة السريعة للدفع</p>
-                    </div>
-
-                    <!-- WALLET ADDRESS WITH COPY BUTTON -->
-                    <div class="w-full mb-6">
-                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.1em] mb-1.5 text-right">عنوان المحفظة:</p>
-                        <div class="flex items-center bg-[#050810] border border-gray-700 rounded-xl overflow-hidden w-full shadow-inner" dir="ltr">
-                            <button onclick="copyText('usdt-wallet')" class="bg-gray-700 hover:bg-gray-600 px-3.5 py-2.5 text-white transition-colors font-black text-xs uppercase tracking-wider shrink-0">
-                                نسخ
-                            </button>
-                            <input type="text" readonly value="TFYUdgz4EsrXGYoX3w4zyGJeeM7wesBNM4" id="usdt-wallet" class="bg-transparent text-gray-300 font-bold text-[11px] sm:text-xs py-2.5 px-3 outline-none mono-font w-full text-center tracking-normal truncate">
-                        </div>
-                    </div>
-                    
-                    <ul class="space-y-3 text-xs text-gray-300 mb-6 flex-grow font-medium">
-                        <li class="flex items-center gap-3"><div class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center"><i class="fa-solid fa-check text-green-400 text-[10px]"></i></div> ترخيص لمدة 7 أيام</li>
-                        <li class="flex items-center gap-3"><div class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center"><i class="fa-solid fa-check text-green-400 text-[10px]"></i></div> جميع الألعاب مفتوحة</li>
-                    </ul>
-
-                    <a href="https://t.me/MEHDIAPK_BOT" target="_blank" class="w-full bg-gray-800 hover:bg-gray-700 text-white font-black text-xs sm:text-sm py-3.5 sm:py-4 px-4 rounded-xl transition-all flex items-center justify-center gap-2 sm:gap-3 mt-auto border border-gray-600 shadow-lg tracking-widest uppercase">
-                        <i class="fa-brands fa-telegram text-sky-400 text-lg sm:text-xl drop-shadow-md"></i> تأكيد الدفع عبر البوت
-                    </a>
-                </div>
-
-                <!-- Option 2: The Target (Free - Сверху на мобилках) -->
-                <div class="glass-panel border-green-500/40 rounded-3xl p-5 sm:p-8 relative shadow-[0_0_40px_rgba(0,255,136,0.1)] flex flex-col transform md:-translate-y-4 bg-gradient-to-b from-[rgba(0,255,136,0.05)] to-transparent">
-                    <div class="absolute -top-3 sm:-top-4 right-1/2 transform translate-x-1/2 bg-green-500 text-black font-black text-[9px] sm:text-[10px] md:text-xs uppercase px-4 sm:px-5 py-1.5 rounded-full tracking-widest shadow-[0_0_20px_rgba(0,255,136,0.4)] w-max">
-                        موصى به بشدة
-                    </div>
-
-                    <div class="text-center border-b border-gray-700/60 pb-5 sm:pb-6 mb-5 sm:mb-6 mt-2 sm:mt-0">
-                        <h3 class="neon-text-green text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] mb-2">مغطى من قبل الراعي</h3>
-                        <div class="text-3xl sm:text-4xl font-black text-white tracking-tight" dir="ltr">مجاناً <span class="text-base sm:text-lg text-gray-500 line-through opacity-50 ml-1">25 USDT</span></div>
-                    </div>
-                    
-                    <p class="text-xs sm:text-sm text-gray-300 mb-5 sm:mb-6 text-center leading-relaxed font-medium">
-                        راعينا <span class="font-black text-blue-400 drop-shadow-md">1xBET</span> سيدفع ثمن ترخيصك إذا اتبعت 3 خطوات بسيطة:
-                    </p>
-
-                    <div class="space-y-3 sm:space-y-4 mb-6 sm:mb-8 flex-grow">
-                        <div class="flex gap-3 sm:gap-4 items-center bg-black/40 p-3 sm:p-3.5 rounded-xl border border-white/5">
-                            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-green-500/20 text-green-400 flex items-center justify-center font-black text-xs sm:text-sm shrink-0 border border-green-500/30">1</div>
-                            <div class="text-xs sm:text-sm text-gray-200 font-medium">أنشئ حساباً <b class="text-white">جديداً</b> على 1xBET.</div>
-                        </div>
-                        
-                        <div class="flex gap-3 sm:gap-4 items-start bg-black/40 p-3 sm:p-4 rounded-xl border border-green-500/20 shadow-[inset_0_0_20px_rgba(0,255,136,0.02)]">
-                            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-green-500/20 text-green-400 flex items-center justify-center font-black text-xs sm:text-sm shrink-0 border border-green-500/30 mt-0.5 sm:mt-1">2</div>
-                            <div class="text-xs sm:text-sm text-gray-200 font-medium w-full">
-                                أدخل الرمز الترويجي عند التسجيل:
-                                <div class="flex items-center bg-[#050810] border border-green-500/40 rounded-xl overflow-hidden mt-2 sm:mt-3 w-full shadow-inner" dir="ltr">
-                                    <button onclick="copyText('promo-code')" class="bg-green-600 hover:bg-green-500 px-4 sm:px-5 py-2.5 sm:py-3 text-white transition-colors font-black text-[10px] sm:text-sm uppercase tracking-wider">
-                                        نسخ
-                                    </button>
-                                    <input type="text" readonly value="HAZZ26" id="promo-code" class="bg-transparent neon-text-green font-black text-base sm:text-xl py-2.5 sm:py-3 px-3 sm:px-4 outline-none mono-font w-full text-center tracking-[0.1em] sm:tracking-[0.15em]">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- GAMIFIED STEP 3 -->
-                        <div class="flex gap-3 sm:gap-4 items-start bg-black/40 p-4 sm:p-5 rounded-xl border border-white/5 flex-col w-full relative">
-                            <div class="flex items-center gap-3 w-full mb-2 sm:mb-3">
-                                <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-green-500/20 text-green-400 flex items-center justify-center font-black text-xs sm:text-sm shrink-0 border border-green-500/30">3</div>
-                                <div class="text-[10px] sm:text-xs text-gray-300 font-black uppercase tracking-[0.1em]">حدد مستوى الإيداع:</div>
-                            </div>
-
-                            <!-- IMPORTANT NOTE FOR USERS -->
-                            <div class="bg-blue-500/10 border border-blue-500/30 p-3 rounded-xl mb-1 text-center w-full">
-                                <p class="text-blue-400 text-[10px] sm:text-xs font-bold leading-relaxed">
-                                    <i class="fa-solid fa-circle-exclamation ml-1"></i> هام: يجب إيداع هذا المبلغ في حسابك الشخصي на 1xBET، وستستخدمه للعب الخاص بك.
-                                </p>
-                            </div>
-                            
-                            <div class="w-full space-y-2.5 sm:space-y-3 mt-2" id="deposit-tiers">
-                                <div id="tier-1" onclick="selectTier(1)" class="cursor-pointer border border-green-500/50 bg-green-500/10 rounded-xl p-3 sm:p-4 transition-all duration-300 transform scale-[1.02] shadow-[0_0_20px_rgba(0,255,136,0.15)] relative overflow-hidden">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-green-500/5 via-transparent to-transparent opacity-50"></div>
-                                    <div class="flex justify-between items-center mb-2 sm:mb-3 relative z-10">
-                                        <div class="flex items-center gap-2 sm:gap-3">
-                                            <span class="text-white font-black text-lg sm:text-xl tracking-tight" dir="ltr">170 EGP</span>
-                                            <span class="bg-green-500/20 text-green-300 text-[8px] sm:text-[9px] px-2 sm:px-2.5 py-1 rounded-md uppercase font-black tracking-widest border border-green-500/30">أساسي</span>
-                                        </div>
-                                        <div id="tier-1-radio" class="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-[3px] sm:border-4 border-green-400 bg-[#050810] flex items-center justify-center shadow-[0_0_10px_rgba(0,255,136,0.5)]"></div>
-                                    </div>
-                                    <ul class="text-[10px] sm:text-xs text-gray-400 font-medium space-y-1.5 sm:space-y-2 mr-1 relative z-10">
-                                        <li class="flex items-center gap-2"><i class="fa-solid fa-plane text-green-400 w-3 sm:w-4"></i> Aviator و Crash مفتوحة</li>
-                                        <li class="flex items-center gap-2"><i class="fa-solid fa-server text-gray-500 w-3 sm:w-4"></i> عقدة بينج قياسية</li>
-                                    </ul>
-                                </div>
-
-                                <div id="tier-2" onclick="selectTier(2)" class="cursor-pointer border border-gray-700/50 bg-black/30 hover:bg-white/5 rounded-xl p-3 sm:p-4 transition-all duration-300 opacity-60 hover:opacity-100">
-                                    <div class="flex justify-between items-center mb-2 sm:mb-3">
-                                        <div class="flex items-center gap-2 sm:gap-3">
-                                            <span class="text-white font-black text-lg sm:text-xl tracking-tight" dir="ltr">300 EGP</span>
-                                            <span class="bg-gray-800 text-gray-400 text-[8px] sm:text-[9px] px-2 sm:px-2.5 py-1 rounded-md uppercase font-black tracking-widest border border-gray-700">احترافي</span>
-                                        </div>
-                                        <div id="tier-2-radio" class="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-gray-600 bg-transparent flex items-center justify-center"></div>
-                                    </div>
-                                    <ul class="text-[10px] sm:text-xs text-gray-400 font-medium space-y-1.5 sm:space-y-2 mr-1">
-                                        <li class="flex items-center gap-2"><i class="fa-solid fa-gamepad text-green-400 w-3 sm:w-4"></i> المستوى 1 + Chicken Road و Mines</li>
-                                        <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-yellow-400 w-3 sm:w-4"></i> مزامنة بيانات عالية السرعة</li>
-                                    </ul>
-                                </div>
-
-                                <div id="tier-3" onclick="selectTier(3)" class="cursor-pointer border border-gray-700/50 bg-black/30 hover:bg-white/5 rounded-xl p-3 sm:p-4 transition-all duration-300 opacity-60 hover:opacity-100">
-                                    <div class="flex justify-between items-center mb-2 sm:mb-3">
-                                        <div class="flex items-center gap-2 sm:gap-3">
-                                            <span class="text-white font-black text-lg sm:text-xl tracking-tight" dir="ltr">1,000 EGP</span>
-                                            <span class="bg-gray-800 text-gray-400 text-[8px] sm:text-[9px] px-2 sm:px-2.5 py-1 rounded-md uppercase font-black tracking-widest border border-gray-700">أقصى</span>
-                                        </div>
-                                        <div id="tier-3-radio" class="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-gray-600 bg-transparent flex items-center justify-center"></div>
-                                    </div>
-                                    <ul class="text-[10px] sm:text-xs text-gray-400 font-medium space-y-1.5 sm:space-y-2 mr-1">
-                                        <li class="flex items-center gap-2"><i class="fa-solid fa-unlock-keyhole text-blue-400 w-3 sm:w-4"></i> جميع الألعاب مفتوحة</li>
-                                        <li class="flex items-center gap-2"><i class="fa-solid fa-microchip text-purple-400 w-3 sm:w-4"></i> ذكاء اصطناعي للتعلم العميق V4.2</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="https://reffpa.com/L?tag=d_5512033m_97c_&pb=a0dae56e63714e9a8b2d5a827bf6bc56&click_id={sub1}&r=registration" target="_blank" class="btn-deposit-pulse w-full bg-[#3b82f6] hover:bg-[#2563eb] text-white font-black text-base sm:text-lg py-3.5 sm:py-4 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 sm:gap-3 mt-auto uppercase tracking-wide">
-                        <i class="fa-solid fa-user-plus text-lg sm:text-xl drop-shadow-md"></i> تسجيل وإيداع
-                    </a>
-                    
-                    <p class="text-center text-[9px] sm:text-[10px] text-gray-400 font-black uppercase tracking-[0.2em] mt-4 flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-shield-cat text-green-500 text-xs sm:text-sm drop-shadow-md"></i> 100% بدون مخاطر: 3 خسائر = استرداد
-                    </p>
-                </div>
-            </div>
-
-            <!-- CTA -->
             <div class="mt-8 sm:mt-10 max-w-2xl mx-auto w-full text-center glass-panel p-5 sm:p-6 rounded-2xl border-blue-500/30 px-4 sm:px-0">
                 <p class="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4 font-bold tracking-wide">
                     <i class="fa-solid fa-circle-info text-blue-400 ml-1 drop-shadow-md"></i> هل قمت بالإيداع؟ أرسل الإثبات للتفعيل.
